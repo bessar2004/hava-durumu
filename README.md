@@ -5,7 +5,7 @@ Bu proje, JavaScript kullanılarak geliştirilmiş ve OpenWeatherMap API ile ent
 
 Uygulama tamamen HTML, CSS ve JavaScript ile geliştirilmiştir. Bu projeyi yaparken amacım, API kullanımını öğrenmek ve JavaScript ile dinamik veri çekmeyi, DOM üzerinden veriyi ekrana yansıtmayı deneyimlemekti.
 
-⚙ Kullanılan Teknolojiler
+ Kullanılan Teknolojiler
 
 HTML5 → Sayfa yapısı ve form elementi
 
