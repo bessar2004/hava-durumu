@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  overflow: hidden; /* sağdaki scrollbar'ı gizler */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+body {
+  margin: 0;
+  height: 100vh; /* ekranın tamamını kaplasın */
+  display: flex;
+  justify-content: center;  /* yatayda ortala */
+  align-items: center;      /* dikeyde ortala */
+
+  background-image: url(sky-7336915_1280.jpg);
+  background-size: cover;      /* ekranı tamamen kapla */
+  background-position: center; /* fotoğrafı tam ortala */
+  background-attachment: fixed; /* kaydırırken sabit kalsın */
+  background-repeat: no-repeat;
+}
+
+.app {
+  background: rgba(0,0,0,0.4); /* yarı saydam katman */
+  min-height: 80vh;            /* kutu ekranın %80 yüksekliğini kaplasın */
+  width: 70%;                  /* kutu genişliği ekranın %70’i */
+  max-width: 900px;            /* maksimum genişlik 900px */
+  border-radius: 30px;
+  padding: 20px;
+
+margin-left: 80px;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6); /* gölge efekti */
+  color: #fff; /* yazılar beyaz */
+}
+
+.app:hover {
+  background: rgba(30, 30, 30, 0.7);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.8), 0 0 20px rgba(97, 218, 251, 0.6);
+  transform: scale(1.02); /* hafif büyüme efekti */
+  transition: all 0.4s ease;
+}
+
+
+
+
+.i {
+  height: 40px;
+  width: 220px;
+  padding: 8px 12px;
+  font-size: 16px;
+
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  outline: none;
+
+  background: rgba(0, 0, 0, 0.4); /* saydam siyah arka plan */
+  color: #fff;
+
+  transition: all 0.3s ease;
+}
+
+/* Input üzerine tıklanınca */
+.i:focus {
+  border-color: #61dafb; /* React mavisi gibi bir renk */
+  box-shadow: 0 0 8px #61dafb;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Placeholder rengi */
+.i::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.b {
+  height: 60px;
+  width: 100px;
+  margin-left: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #61dafb, #3a8dff); /* mavi geçiş */
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+/* Üzerine gelince */
+.b:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(97, 218, 251, 0.8);
+}
+
+/* Tıklayınca */
+.b:active {
+  transform: scale(0.95);
+}
+
+.weather-info {
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+p {
+  font-size: large;
+}
+h2 {
+  font-size: x-large;
+}
