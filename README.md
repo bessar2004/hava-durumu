@@ -1,40 +1,84 @@
-Hava Durumu Uygulaması – Proje Açıklaması 
+# Hava Durumu Uygulaması
 
+Bu proje, React ve Vite kullanılarak geliştirilmiş basit bir hava durumu uygulamasıdır. Kullanıcı şehir adı girerek OpenWeatherMap API üzerinden anlık hava durumu bilgilerini görüntüleyebilir.
 
-Bu proje, JavaScript kullanılarak geliştirilmiş ve OpenWeatherMap API ile entegre edilmiş basit bir hava durumu uygulamasıdır. Kullanıcı, istediği şehir adını girerek o şehre ait anlık hava durumu bilgilerini (sıcaklık, hava durumu durumu, simge, konum vb.) görüntüleyebilir.
+Uygulama; sıcaklık, hava açıklaması, ülke kodu, nem oranı, hissedilen sıcaklık, rüzgar hızı ve basınç gibi temel hava durumu verilerini ekranda gösterir.
 
-Uygulama tamamen HTML, CSS ve JavaScript ile geliştirilmiştir. Bu projeyi yaparken amacım, API kullanımını öğrenmek ve JavaScript ile dinamik veri çekmeyi, DOM üzerinden veriyi ekrana yansıtmayı deneyimlemekti.
+## Özellikler
 
- Kullanılan Teknolojiler
+- Şehir adına göre anlık hava durumu sorgulama
+- OpenWeatherMap API ile veri çekme
+- Sıcaklık bilgisini Celsius olarak gösterme
+- Hava durumu simgesini ekranda gösterme
+- Nem, hissedilen sıcaklık, rüzgar hızı ve basınç bilgilerini listeleme
+- Boş şehir girişinde kullanıcıyı uyarma
+- Geçersiz şehir adında hata mesajı gösterme
+- Arka plan görseliyle sade ve kullanıcı dostu arayüz
 
-HTML5 → Sayfa yapısı ve form elementi
+## Kullanılan Teknolojiler
 
-CSS3 → Arayüz tasarımı, responsive yapı
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- OpenWeatherMap API
+- Fetch API
 
-JavaScript (Vanilla) → Uygulama mantığı, API ile veri çekme, DOM işlemleri
+## Kurulum
 
-OpenWeatherMap API → Şehre göre hava durumu verisi alma
+Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 
-fetch API → Asenkron veri çekme (.then() ve .catch() zinciriyle)
+```bash
+git clone https://github.com/bessar2004/hava-durumu.git
+cd hava-durumu
+npm install
+npm run dev
+```
 
- Uygulamanın Özellikleri
+Uygulama varsayılan olarak şu adreste çalışır:
 
-Kullanıcıdan şehir ismi alma
+```text
+http://localhost:5173
+```
 
-API’den anlık hava verilerini çekme
+## Kullanım
 
-Hava durumu bilgilerini (sıcaklık, açıklama, ülke kodu vb.) ekranda gösterme
+1. Uygulamayı açın.
+2. Arama kutusuna bir şehir adı yazın.
+3. `Ara` butonuna tıklayın.
+4. Seçilen şehir için güncel hava durumu bilgilerini görüntüleyin.
 
-Hatalı veya boş şehir girişinde uyarı verme
+## Proje Yapısı
 
-Basit, temiz ve responsive kullanıcı arayüzü
+```text
+hava-durumu/
+├── index.html
+├── package.json
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.jsx
+│   └── sky-7336915_1280.jpg
+└── README.md
+```
 
-JavaScript ile tamamen etkileşimli yapı
+## API Kullanımı
 
+Uygulama, OpenWeatherMap Current Weather Data servisini kullanır. API isteği `src/App.jsx` dosyasında yapılır ve şehir adı kullanıcıdan alınan input değerine göre oluşturulur.
 
+Örnek istek mantığı:
 
- Projeyi Geliştirme Amacım
+```javascript
+https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric&lang=tr
+```
 
-Bu projeyi yapmaktaki amacım, gerçek bir API kullanarak dinamik veri çekmeyi, form inputlarını kontrol etmeyi, ve kullanıcı etkileşimli bir uygulama geliştirmeyi öğrenmekti. Aynı zamanda JS ile DOM üzerindeki tüm işlemleri manuel olarak yaparak, temel frontend becerilerimi geliştirdim
+Güvenlik açısından API anahtarının ileride `.env` dosyasına taşınması daha uygun olacaktır.
 
+## Geliştirme Amacı
 
+Bu proje, React ile temel state yönetimini, kullanıcı inputlarını kontrol etmeyi, API üzerinden veri çekmeyi ve gelen verileri arayüzde göstermeyi öğrenmek amacıyla hazırlanmıştır.
+
+Proje sayesinde frontend tarafında React component yapısı, event handling, async API çağrıları ve CSS ile görsel arayüz geliştirme konularında pratik yapılmıştır.
