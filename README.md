@@ -1,4 +1,4 @@
-# Hava Durumu Uygulaması
+# Hava Durumu Web Sitesi
 
 Bu proje, React ve Vite kullanılarak geliştirilmiş basit bir hava durumu uygulamasıdır. Kullanıcı şehir adı girerek OpenWeatherMap API üzerinden anlık hava durumu bilgilerini görüntüleyebilir.
 
